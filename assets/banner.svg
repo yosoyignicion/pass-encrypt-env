@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 220" width="1000" height="220" role="img" aria-label="pass-encrypt-env">
+  <defs>
+    <linearGradient id="pe" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#89b4fa"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1000" height="220" rx="20" fill="#1e1e2e"/>
+  <rect x="0.5" y="0.5" width="999" height="219" rx="20" fill="none" stroke="#313244" stroke-width="1"/>
+  <g transform="translate(60,46)">
+    <rect x="0" y="0" width="128" height="128" rx="28" fill="#181825"/>
+    <path d="M45 60 V49 a19 19 0 0 1 38 0 V60" fill="none" stroke="url(#pe)" stroke-width="9" stroke-linecap="round"/>
+    <rect x="36" y="60" width="56" height="46" rx="13" fill="url(#pe)"/>
+    <path d="M53 76 l9 7 l-9 7" fill="none" stroke="#181825" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="69" y="88" width="14" height="6" rx="3" fill="#181825"/>
+  </g>
+  <text x="226" y="104" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="54" font-weight="700" fill="#cdd6f4">pass-encrypt-env</text>
+  <text x="228" y="146" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="24" font-weight="400" fill="#9399b2">bóveda local · contraseña maestra + TOTP · cero prompts</text>
+  <text x="228" y="182" font-family="'JetBrains Mono','Fira Code',monospace" font-size="20" fill="url(#pe)">$ passenv exec -- ./app</text>
+</svg>

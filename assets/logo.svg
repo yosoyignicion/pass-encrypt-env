@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="pass-encrypt-env">
+  <defs>
+    <linearGradient id="pe" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#89b4fa"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="120" height="120" rx="28" fill="#1e1e2e"/>
+  <rect x="4" y="4" width="120" height="120" rx="28" fill="none" stroke="url(#pe)" stroke-width="3"/>
+  <path d="M45 60 V49 a19 19 0 0 1 38 0 V60" fill="none" stroke="url(#pe)" stroke-width="9" stroke-linecap="round"/>
+  <rect x="36" y="60" width="56" height="46" rx="13" fill="url(#pe)"/>
+  <path d="M53 76 l9 7 l-9 7" fill="none" stroke="#1e1e2e" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="69" y="88" width="14" height="6" rx="3" fill="#1e1e2e"/>
+</svg>

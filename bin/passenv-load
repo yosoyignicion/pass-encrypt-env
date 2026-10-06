@@ -1,0 +1,56 @@
+#!/usr/bin/env bash
+# passenv-load — imprime líneas 'export K=V' para inyectar secretos.
+#
+# Preferencia (segura durante la migración):
+#   1) bóveda passenv si el agente corre, está DESBLOQUEADA y contiene TODAS las
+#      claves del manifiesto;
+#   2) si no, GNU keyring vía keyring-env con el manifiesto indicado.
+#
+# Uso:  eval "$(passenv-load RUTA/.secrets)"
+set -euo pipefail
+set +x   # nunca trazar: bajo `bash -x` imprimiría los valores de los export
+
+manifest="${1:-}"
+
+# Resolución robusta del binario (independiente del PATH de la app GUI).
+PASSENV="${PASSENV_BIN:-$HOME/.local/bin/passenv}"
+if [ ! -x "$PASSENV" ]; then
+    PASSENV="$(command -v passenv 2>/dev/null || true)"
+fi
+
+vault="$HOME/.config/pass-encrypt-env/vault.enc"
+
+if [ -n "$PASSENV" ] && [ -f "$vault" ]; then
+    if out="$("$PASSENV" env --if-unlocked 2>/dev/null)"; then
+        if [ -z "$manifest" ]; then
+            if [ -n "$out" ]; then
+                printf '%s\n' "$out"
+                exit 0
+            fi
+        elif [ -f "$manifest" ]; then
+            missing=0
+            while read -r svc key _; do
+                case "$svc" in ''|'#'*) continue ;; esac
+                if [ -z "${key:-}" ]; then
+                    continue
+                fi
+                if ! printf '%s\n' "$out" | grep -q "^export ${key}="; then
+                    missing=1
+                    break
+                fi
+            done < "$manifest"
+            if [ "$missing" -eq 0 ] && [ -n "$out" ]; then
+                printf '%s\n' "$out"
+                exit 0
+            fi
+        fi
+    fi
+    echo "passenv-load: bóveda no utilizable (bloqueada, inactiva o sin todas las claves); fallback…" >&2
+fi
+
+if [ -n "$manifest" ] && [ -f "$manifest" ] && [ -x "$HOME/.local/bin/keyring-env" ]; then
+    exec "$HOME/.local/bin/keyring-env" --export "$manifest"
+fi
+
+echo "passenv-load: no hay fuente de secretos (bóveda bloqueada y sin manifiesto)." >&2
+exit 0

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=passenv agent
+Comment=Desbloqueo de la bóveda de secretos al iniciar sesión
+Exec=__PASSENV_AGENT__ --delay 5
+Icon=dialog-password
+Terminal=false
+X-GNOME-Autostart-enabled=true

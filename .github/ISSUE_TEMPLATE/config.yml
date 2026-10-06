@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Reportar una vulnerabilidad
+    url: https://github.com/yosoyignicion/pass-encrypt-env/security/advisories/new
+    about: Para fallos de seguridad, usa el aviso privado (NO abras un issue público).
+  - name: Guía de uso
+    url: https://github.com/yosoyignicion/pass-encrypt-env/blob/main/docs/GUIA_USO.md
+    about: Instalación, uso, recuperación y solución de problemas.

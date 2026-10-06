@@ -1,0 +1,6 @@
+* text=auto eol=lf
+
+*.svg text
+*.sh text eol=lf
+*.service text
+*.desktop text

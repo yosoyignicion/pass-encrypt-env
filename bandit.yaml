@@ -1,0 +1,13 @@
+# Configuración de Bandit para pass-encrypt-env.
+#
+# Solo se escanea `src/`. Las llamadas a subprocess son deliberadas y controladas
+# (rutas fijas, sin shell): secret-tool, lanzador del agente y execvp de `passenv exec`.
+# Por eso se silencian B404/B603/B607/B606 (todas de severidad baja).
+# B108: el fallback `/tmp/passenv-<uid>` solo se usa si falta XDG_RUNTIME_DIR, y el
+# directorio se crea con permisos 0700. Cualquier hallazgo MEDIO/ALTO real falla el gate.
+skips:
+  - B404
+  - B603
+  - B606
+  - B607
+  - B108

@@ -1,0 +1,36 @@
+# Bóveda y material sensible — NUNCA commitear
+*.enc
+*.tmp
+vault
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+coverage.xml
+htmlcov/
+build/
+dist/
+
+# Paquetes / logs
+*.log
+*.tar.gz
+*.deb
+
+# Estado local de agentes
+.engram/
+
+# Editores / SO
+.idea/
+.vscode/
+.DS_Store

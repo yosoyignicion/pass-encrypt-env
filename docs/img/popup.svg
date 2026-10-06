@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 430" width="720" height="430" role="img" aria-label="Pop-up de desbloqueo de passencryptenv">
+  <defs>
+    <linearGradient id="pe" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#89b4fa"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="430" fill="#0f0f14"/>
+  <rect x="150" y="55" width="420" height="320" rx="16" fill="#1e1e2e" stroke="#313244"/>
+  <circle cx="176" cy="81" r="5" fill="#f38ba8"/>
+  <circle cx="194" cy="81" r="5" fill="#f9e2af"/>
+  <circle cx="212" cy="81" r="5" fill="#a6e3a1"/>
+  <rect x="150" y="100" width="420" height="1" fill="#313244"/>
+
+  <g transform="translate(184,128) scale(0.52)">
+    <path d="M45 60 V49 a19 19 0 0 1 38 0 V60" fill="none" stroke="url(#pe)" stroke-width="9" stroke-linecap="round"/>
+    <rect x="36" y="60" width="56" height="46" rx="13" fill="url(#pe)"/>
+    <path d="M53 76 l9 7 l-9 7" fill="none" stroke="#1e1e2e" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="69" y="88" width="14" height="6" rx="3" fill="#1e1e2e"/>
+  </g>
+  <text x="262" y="152" font-family="'Segoe UI',Arial,sans-serif" font-size="21" font-weight="700" fill="#cdd6f4">Desbloquear bóveda</text>
+  <text x="264" y="176" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#9399b2">passencryptenv · contraseña maestra + TOTP</text>
+
+  <rect x="184" y="206" width="352" height="44" rx="9" fill="#313244" stroke="#45475a"/>
+  <text x="200" y="234" font-family="'Segoe UI',Arial,sans-serif" font-size="14" fill="#6c7086">Contraseña maestra</text>
+  <text x="200" y="234" font-family="'Segoe UI',Arial,sans-serif" font-size="16" fill="#cdd6f4" letter-spacing="3">••••••••••••••</text>
+
+  <rect x="184" y="262" width="352" height="44" rx="9" fill="#313244" stroke="#89b4fa"/>
+  <text x="200" y="290" font-family="'Segoe UI',Arial,sans-serif" font-size="16" fill="#cdd6f4" letter-spacing="8">123 456</text>
+
+  <rect x="436" y="326" width="100" height="38" rx="9" fill="#45475a"/>
+  <text x="486" y="350" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-size="14" fill="#cdd6f4">Más tarde</text>
+  <rect x="184" y="326" width="150" height="38" rx="9" fill="url(#pe)"/>
+  <text x="259" y="350" text-anchor="middle" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1e1e2e">Desbloquear</text>
+
+  <text x="360" y="410" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="12" fill="#6c7086">ventana no modal · el escritorio sigue usable</text>
+</svg>
